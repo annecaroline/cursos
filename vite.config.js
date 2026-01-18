@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // Ex: base: '/curso-teste-software-landing/'
 export default defineConfig({
   plugins: [react()],
-  base: '/cursos/'
+  base: '/cursos/' 
 })
