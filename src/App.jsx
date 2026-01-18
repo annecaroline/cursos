@@ -119,6 +119,7 @@ export default function LandingCursoTesteBasico() {
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
           <a href="#home" className="font-extrabold text-xl tracking-tight">Simplificando<span className="text-insprak-600"> Teste de Software</span></a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
+            <a href="#cursos" className="hover:opacity-80">Cursos</a>
             <a href="#conteudo" className="hover:opacity-80">Conteúdo</a>
             <a href="#publico" className="hover:opacity-80">Para quem é?</a>
             <a href="#metodologia" className="hover:opacity-80">Metodologia</a>
@@ -130,8 +131,16 @@ export default function LandingCursoTesteBasico() {
       </header>
 
       {/* Hero */}
+      <section id="cursos" >
+        <div className="max-w-6xl mx-auto px-2 py-16 md:py-18 grid md:grid-cols-3 gap-10 items-center">
+          <a href="#home"><Button className="w-full rounded-2xl mt-2">Curso Básico de Teste de Software</Button></a>
+          <a href="https://www.simplificandoteste.com.br/curso_teste_manual_mobile/"><Button className="w-full rounded-2xl mt-2">Curso de Testes para Aplicativos Móveis</Button></a>
+          <a href="https://www.udemy.com/course/git-e-github-do-zero-aprenda-versionamento-de-forma-simples/" target="_blank"><Button className="w-full rounded-2xl mt-2">Curso de Básico de Git e GitHub</Button></a>
+        </div>
+      </section>
       <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(108,99,255,0.06),transparent)]" />
+        
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <motion.div {...fadeUp}>
             <div className="inline-flex items-center gap-2 text-5 px-3 py-1 rounded-full border border-insprak-300 mb-4 text-insprak-700">
