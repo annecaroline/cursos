@@ -16,15 +16,15 @@ const TESTIMONIALS = [
   {
   name: "R. Queiroz",
   role: "Aluna do curso",
-  quote: "O Conteúdo, muito bem explicado e as tarefas com a participação de toda a turma, simulando o ambiente real de trabalho.",
+  quote: "O Conteúdo, muito bem explicado e as tarefas com a participação de toda a turma, simulando o ambiente real de trabalho. Fui promovida para QA Pleno.",
   },
   {
   name: "J. Ferreira",
   role: "Aluna do curso",
-  quote: "Me ajudou a migrar como QA júnior.",
+  quote: "Me ajudou a migrar de carreira como QA júnior. Comecei do zero na área de TI hoje já participo de reuniões de refinamento, crio o BDD das histórias junto com o time e realizo inspeção na documentação.",
   },
   {
-  name: "W. Alves",
+  name: "T. Alves",
   role: "Aluno do curso",
   quote: "Foi um curso muito completo. Agregou muito no meu aprendizado. Professora Anne Rocha sabe conduzir as aulas de forma que prende a atenção e desperta interesse pelo conteúdo.",
   },
@@ -33,7 +33,7 @@ const TESTIMONIALS = [
 // === Configurações de vídeo (YouTube) ===
 // Substitua a URL abaixo pelo link do seu vídeo do YouTube.
 // Ex.: https://www.youtube.com/watch?v=ysz5S6PUM-U ou https://youtu.be/ysz5S6PUM-U
-const YOUTUBE_URL = "https://www.youtube.com/watch?v=wsujJqjdJL8";
+const YOUTUBE_URL = "https://www.youtube.com/watch?v=9UGdpJqywAc";
 
 // Extrai o ID do YouTube de vários formatos de URL
 const getYouTubeId = (url) => {
@@ -119,42 +119,39 @@ export default function LandingCursoTesteBasico() {
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
           <a href="#home" className="font-extrabold text-xl tracking-tight">Simplificando<span className="text-insprak-600"> Teste de Software</span></a>
           <nav className="hidden md:flex items-center gap-6 text-sm">
-            <a href="#cursos" className="hover:opacity-80">Cursos</a>
             <a href="#conteudo" className="hover:opacity-80">Conteúdo</a>
             <a href="#publico" className="hover:opacity-80">Para quem é?</a>
-            <a href="#metodologia" className="hover:opacity-80">Metodologia</a>
+            <a href="#metodologia" className="hover:opacity-80">Metodologia</a> 
             <a href="#instrutora" className="hover:opacity-80">Mentora</a>
             <a href="#matricula" className="hover:opacity-80">Matrícula</a>
           </nav>
-          <a href="#matricula" className="md:inline-block hidden"><Button className="rounded-2xl">Inscreva-se</Button></a>
+          <a href="#matricula" className="md:inline-block hidden"><Button className="rounded-2xl">Quero evoluir minha carreira</Button></a>
         </div>
       </header>
 
       {/* Hero */}
-      <section id="cursos" >
-        <div className="max-w-6xl mx-auto px-2 py-16 md:py-18 grid md:grid-cols-3 gap-10 items-center">
-          <a href="#home"><Button className="w-full rounded-2xl mt-2">Curso Básico de Teste de Software</Button></a>
-          <a href="https://www.simplificandoteste.com.br/curso_teste_manual_mobile/"><Button className="w-full rounded-2xl mt-2">Curso de Testes para Aplicativos Móveis</Button></a>
-          <a href="https://www.udemy.com/course/git-e-github-do-zero-aprenda-versionamento-de-forma-simples/" target="_blank"><Button className="w-full rounded-2xl mt-2">Curso de Básico de Git e GitHub</Button></a>
-        </div>
-      </section>
       <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(108,99,255,0.06),transparent)]" />
-        
         <div className="max-w-6xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
           <motion.div {...fadeUp}>
             <div className="inline-flex items-center gap-2 text-5 px-3 py-1 rounded-full border border-insprak-300 mb-4 text-insprak-700">
               <Rocket className="h-5 w-5 text-insprak-600" />
-              Comece sua carreira em QA do zero
+              Curso de formação em TI
             </div>
-            <h1 className="text-3xl md:text-5xl font-black leading-tight">Curso Básico de <span className=" decoration-wavy decoration-insprakAccent">Teste de Software</span></h1>
-            <p className="mt-4 text-lg text-insprak-700 max-w-xl">Aprenda os fundamentos de QA, escreva seus primeiros casos de teste, entenda a diferença entre tipos e níveis de testes e valide software com confiança.</p>
+            <h1 className="text-3xl md:text-5xl font-black leading-tight">
+             <span className=" decoration-wavy decoration-insprakAccent">Evolua sua Carreira como QA</span></h1>
+            <p className="mt-4 text-lg text-insprak-700 max-w-xl">Pare de apenas executar testes. 
+             Os melhores QAs não são reconhecidos porque encontram mais bugs. 
+             São reconhecidos porque ajudam o time a construir software com menos defeitos desde a especificação.</p>          
+             <p className="mt-4 text-lg text-insprak-700 max-w-xl">Aprenda a influenciar a qualidade do software antes da primeira linha de código. 
+             Um treinamento para QAs que desejam evoluir da execução de testes para a definição de estratégias, 
+             revisão de especificações e tomada de decisões baseada em métricas.</p>
              
             {/* Stats */}
             <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
-              <div className="flex items-center gap-2 text-insprak-800"><Clock className="h-6 w-6 text-insprak-600" /> 20h+ de aulas gravadas</div>
               <div className="flex items-center gap-2 text-insprak-800"><GraduationCap className="h-6 w-6 text-insprak-600" /> Certificado</div>
               <div className="flex items-center gap-2 text-insprak-800"><Users className="h-6 w-6 text-insprak-600" /> 5 mentorias ao vivo</div>
+              <div className="flex items-center gap-2 text-insprak-800"><Clock className="h-6 w-6 text-insprak-600" /> Aulas gravadas</div>
             </div>
           </motion.div>
           <motion.div {...fadeUp} className="relative">
@@ -175,24 +172,21 @@ export default function LandingCursoTesteBasico() {
 </div>
 )}
 </div>
-<p className="text-6 text-center text-insprak-700 mt-2">Assista uma aula sobre Criar Roteiro de Teste</p>
+<p className="text-6 text-center text-insprak-700 mt-2">Curso para evolução na carreira como QA</p>
 </motion.div>
         </div>
       </section>
       <div className="max-w-6xl mx-auto px-4">
-      <a href="https://pay.hotmart.com/D93730200N"><Button className="w-full rounded-2xl mt-2">Comprar agora</Button></a>
+      <a href="#matricula"><Button className="w-full rounded-2xl mt-2">Quero evoluir minha carreira</Button></a>
       </div>
  
       {/* Benefícios */}
       <section id="beneficios" className="py-14">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
-            <Feature icon={PlayCircle} title="Aulas Gravadas + Ao vivo" desc="Assista no seu ritmo e revise quando quiser." />
-            <Feature icon={Bug} title="Testes Manuais" desc="Foco em fundamentos e prática guiada." />
-            <Feature icon={Layers} title="Scrum" desc="Entenda o papel do QA em times ágeis." />
-            <Feature icon={FileCheck2} title="Jira & Confluence" desc="Organize casos, defeitos e documentação." />
-            <Feature icon={Users} title="5 Mentorias ao vivo" desc="Encontros estratégicos para tirar dúvidas e praticar." />
-            <Feature icon={ShieldCheck} title="Certificado" desc="Conclua o curso e receba seu certificado." />
+            <Feature icon={PlayCircle} title="Shift Left na prática" desc="Aprenda revisão de especificações com Inspeção PBR para evoluir para um QA mais estratégico." />
+            <Feature icon={Bug} title="Testes Manuais" desc="Roteiros de testes estratégicos com cenários mais críticos" />
+            <Feature icon={Layers} title="Scrum, Jira & Confluence" desc="Entenda o papel do QA em processos ágeis." /> 
           </div>
         </div>
       </section>
@@ -204,41 +198,45 @@ export default function LandingCursoTesteBasico() {
            
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            <ModuleItem title="Fundamentos de QA" topics={[
+           
+            <ModuleItem title="Encontrando defeitos antes do código" topics={[ 
+              "Ao vivo: Revisar os critérios de aceite e BDD das user stories.",
+              "Ao vivo: Revisão de Especificações usando Inspeção PBR",
+              "Ao vivo: Identificar requisitos ambíguos ou inconsistentes",
+              "Ao vivo: Descobrir cenários esquecidos",
+              "Aprimorar a qualidade ainda durante o Refinamento",
+            ]} />
+           <ModuleItem title="Decisões baseadas em Métricas" topics={[
+              "Ao vivo: Exemplos práticos de Métricas em Teste de Software",
+              "Ao vivo: Tomadas de decisão com base nas Métricas",
+              "Ao vivo: Priorização baseada em risco",
+              "Ao vivo: Pensamento crítico aplicado à qualidade",
+            ]} />
+           <ModuleItem title="Pensamento Estratégico em QA" topics={[
               "Fundamentos de testes manuais para sistemas web",
               "Tipos x níveis de teste",
               "Ciclo de vida do bug",
               "Histórias de usuário, critérios de aceite",
               "Requisitos funcionais, não-funcionais e regras de negócio",
+            ]} /> 
+            <ModuleItem title="Construção inteligente de cenários" topics={[
+              "Ao vivo: Roteiros de teste, cenários e casos de teste que realmente encontram bugs", 
+              "Ao vivo: Técnicas de roteiro de teste baseadas em diagramas BPMN e Máquina de estados",      
+              "Ao vivo: Partição de equivalência e análise de valor limite",
             ]} />
-            <ModuleItem title="Processo e Artefatos" topics={[
-              "Ao vivo: Revisar os critérios de aceite e BDD das user stories.",
-              "Roteiros de teste, cenários e casos de teste",
-              "Ao vivo: Como criar um roteiro de teste",
-              
-            ]} />
-            <ModuleItem title="Técnicas Essenciais" topics={[
-              "Ao vivo: aplicar estratégias em roteiros de teste",
-              "Partição de equivalência e análise de valor limite",
-              "Estratégias e técnicas de teste",             
-              
-            ]} />
-            <ModuleItem title="Execução e Relatórios" topics={[
+            <ModuleItem title="Classificação e priorização de defeitos" topics={[
               "Ao vivo: Como executar testes",
-              "Como criar relatórios de defeitos claros",
-              "Acesso às ferramentas Jira e Confluence",
+              "Ao vivo: Como criar relatórios de defeitos detalhados",
+              "Ao vivo: Como classificar e priorizar os bugs",
+              "Ao vivo: Acesso às ferramentas Jira e Confluence",
             ]} />
-            <ModuleItem title="Ferramentas" topics={[
+            <ModuleItem title="Processos Ágeis e Carreira" topics={[
               "Ao vivo: Documentação de testes no Jira/Confluence",
-              "Scrum: papéis e cerimônias na prática",
-              "Scrum: planejamento da sprint e retrospectiva",
-              
+              "Ao vivo: Scrum: papéis e cerimônias na prática",
+              "Ao vivo: Scrum: planejamento da sprint e retrospectiva",
+              "Ao vivo: Dicas para evoluir na carreira",
             ]} />
-            <ModuleItem title="Carreira e Portfólio" topics={[
-              "Planilha de progresso com atividades do curso",
-              "Dicas para se preparar para o mercado",
-              "Métricas em Teste de Software",
-            ]} />
+            
           </div>
         </div>
       </section>
@@ -248,13 +246,13 @@ export default function LandingCursoTesteBasico() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 items-start">
           <motion.div {...fadeUp} className="md:col-span-1">
             <h2 className="text-2xl md:text-3xl font-bold">Para quem é o curso?</h2>
-            <p className="text-insprak-700 mt-2">Perfeito para iniciantes e profissionais migrando de outras áreas que querem resultados práticos rapidamente.</p>
+            <p className="text-insprak-700 mt-2">Perfeito tanto para iniciantes quanto profissionais que já atuam em QA e desejam evoluir tecnicamente.</p>
           </motion.div>
           <div className="md:col-span-2 grid sm:grid-cols-2 gap-4">
-            <Feature icon={Laptop} title="Quem está começando" desc="Primeiro contato com QA e testes, sem pré-requisitos de programação." />
-            <Feature icon={Smartphone} title="Pessoas de produto" desc="POs, Agilistas, UX Design que desejam melhorar a qualidade das entregas." />
-            <Feature icon={GitBranch} title="QA júnior" desc="Analistas de teste que querem aprimorar sua carreira como QA." />
-            <Feature icon={ClipboardCheck} title="Profissionais de TI" desc="Profissionais que lidam com sistemas e precisam compreender processos ágeis." />
+            <Feature icon={Laptop} title="Profissionais de QA" desc="Quer evoluir a carreira para um QA Estratégico essencial nos projetos" /> 
+            <Feature icon={GitBranch} title="QA Iniciante" desc="Para aprimorar o pensamento estratégico e se destacar na carreira." />
+            <Feature icon={ClipboardCheck} title="Profissionais de TI" desc="Profissionais de TI que trabalham com engenharia de software" />
+            <Feature icon={Smartphone} title="Pessoas de produto" desc="Profissionais de TI, POs, Agilistas, UX Design que desejam melhorar a qualidade das entregas." />
           </div>
         </div>
       </section>
@@ -280,6 +278,19 @@ export default function LandingCursoTesteBasico() {
             </ul>
           </motion.div>
           <motion.div {...fadeUp} className="lg:col-span-2 grid md:grid-cols-2 gap-4">
+           <Card className="rounded-2xl">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2"><Clock className="h-5 w-5 text-insprak-600" />O que você será capaz de fazer?</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm space-y-2 text-insprak-700">
+                <p>Encontrar problemas antes do desenvolvimento</p> 
+                <p>Melhorar histórias de usuário</p>
+                <p>Participar de refinamentos com olhar mais crítico</p>
+                <p>Criar estratégias de teste para diferentes cenários</p>
+                <p>Utilizar métricas para tomada de decisão</p>
+                <p>Gerar mais valor para Product Owner e Desenvolvedores</p>
+              </CardContent>
+            </Card>
             <Card className="rounded-2xl">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2"><Clock className="h-5 w-5 text-insprak-600" />Formato</CardTitle>
@@ -287,20 +298,33 @@ export default function LandingCursoTesteBasico() {
               <CardContent className="text-sm space-y-2 text-insprak-700">
                 <p>Aulas gravadas + 5 encontros ao vivo.</p> 
                 <p>Carga horária: 5 h/sem dedicadas para atividades</p>
-                <p>Acesso: 12 meses para rever quando quiser.</p>
+                <p>Acesso: Vitalício na plataforma do Hotmart para rever quando quiser.</p>
                 <p>Materiais: PDFs, checklists, planilhas.</p>
+                <p>Certificado de conclusão com verificação por QRCode.</p>
+                <p>Critério para certificado: 100% das atividades do curso.</p>
               </CardContent>
-            </Card>
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2"><ShieldCheck className="h-5 w-5 text-insprak-600" />Certificação</CardTitle>
-              </CardHeader>
-              <CardContent className="text-sm space-y-2 text-insprak-700">
-                <p>Certificado de conclusão com verificação por código.</p>
-                <p>Critério: 100% das atividades do curso.</p>
-              </CardContent>
-            </Card>
+            </Card>             
           </motion.div>
+        </div>
+      </section>
+
+     {/* Diferencial do curso */}
+      <section id="publico" className="py-16">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-6 items-start">
+          <motion.div {...fadeUp} className="md:col-span-1">
+            <h2 className="text-2xl md:text-3xl font-bold">Qual o diferencial do curso?</h2>
+            <p className="text-insprak-700 mt-2">Além de ...<br/>
+              ✔ Criar cenários de teste<br/>
+              ✔ Executar testes<br/>
+              ✔ Reportar defeitos no Jira<br/>
+              Neste curso você aprenderá também....</p>
+          </motion.div>
+          <div className="md:col-span-2 grid sm:grid-cols-2 gap-4">
+            <Feature icon={Laptop} title="Shift left na prática" desc="Utilizar a inspeção PBR para identificar insconsistências na especificação" /> 
+            <Feature icon={GitBranch} title="Estratégias de teste" desc="Construção inteligente de cenários de teste" />
+            <Feature icon={ClipboardCheck} title="Pensamento crítico" desc="Participar de refinamentos de histórias com mais precisão" />
+            <Feature icon={Smartphone} title="Métricas de teste" desc="Decisões estratégicas baseadas em Métricas" />
+          </div>
         </div>
       </section>
 
@@ -314,14 +338,17 @@ export default function LandingCursoTesteBasico() {
           </motion.div>
           <motion.div {...fadeUp}>
             <h2 className="text-2xl md:text-3xl font-bold">Sobre a Mentora</h2>
-            <p className="text-insprak-700 mt-2">Mestre em Ciência da Computação e referência em Qualidade de Software, com mais de 18 anos de carreira, certificação BSTQB e autora do livro “Simplificando Teste de Software”. Desde 2012, ensina em pós-graduação e formações em TI, unindo teoria e prática em Web e Mobile (React, Flutter, Rails, Java, HTML/CSS/JS). Apaixonada por ensinar, ajuda iniciantes e profissionais a evoluírem em Testes de Software, acreditando que qualidade transforma carreiras e rotinas na TI.</p>
+            <p className="text-insprak-700 mt-2">Tech Lead QA. Mestre em Ciência da Computação e referência em Qualidade de Software, com mais de 18 anos de carreira, certificação BSTQB (CTFL-AT) e autora do livro “Simplificando Teste de Software”. Desde 2012, ensina em pós-graduação e formações em TI, unindo teoria e prática em Web e Mobile (React, Flutter, Rails, Java, HTML/CSS/JS). Apaixonada por ensinar, ajuda iniciantes e profissionais a evoluírem em Testes de Software, acreditando que qualidade transforma carreiras e rotinas na TI.</p>
             <div className="mt-4 grid sm:grid-cols-2 gap-4">
               <Feature icon={Star} title="Experiência prática" desc="Testes em sistemas web, API e mobile. Domina tecnologias como React, Flutter, Ruby on Rails, Java, HTML, CSS e JavaScript." />
-              <Feature icon={Cpu} title="Visão de carreira" desc="Mentora para transição de carreira em TI." />
+              <Feature icon={Cpu} title="Visão de carreira" desc="Percebi que muitos profissionais aprendem a executar testes, mas poucos aprendem a construir uma cultura de qualidade desde o início do projeto." />
             </div>
           </motion.div>
         </div>
       </section>
+     
+      
+     
       {/* Depoimentos */}
       <section id="depoimentos" className="py-16 bg-white border-y border-insprak-200">
       <div className="max-w-6xl mx-auto px-4">
@@ -353,22 +380,26 @@ export default function LandingCursoTesteBasico() {
       <section id="matricula" className="py-16">
         <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-3 gap-6 items-start">
           <motion.div {...fadeUp} className="lg:col-span-2">
-            <h2 className="text-2xl md:text-3xl font-bold">Garanta sua vaga</h2>
-            <p className="text-insprak-700 mt-2">Faça parte da nova turma.
-             Parcelamento disponível no cartão.</p>
+            <h2 className="text-2xl md:text-3xl font-bold">Pense como um QA Estratégico</h2> 
+            <p className="text-insprak-700 mt-2"><b>Antes do curso</b></p>
+            <p className="text-insprak-700 mt-2">"Vou esperar a funcionalidade ficar pronta para testar."</p> 
+            <p className="text-insprak-700 mt-2">"A quantidade de bugs só aumenta e o time nem está corrigindo."</p>
+            <p className="text-insprak-700 mt-2"><b>Depois do curso</b></p>            
+            <p className="text-insprak-700 mt-2">"Já encontrei três inconsistências na especificação antes do desenvolvimento começar."</p>
+            <p className="text-insprak-700 mt-2">"Quase não temos incidentes em produção, a equipe agora tem o foco em qualidade."</p>
             <div className="grid md:grid-cols-1 gap-6 mt-6">
               <Card className="rounded-2xl">
                 <CardHeader>
-                  <CardTitle className="text-xl">Mentoria em Grupo</CardTitle>
+                  <CardTitle className="text-xl">Torne-se o profissional que agrega mais valor para o time antes mesmo da implementação começar.</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm">
                   <div className="text-3xl font-black text-insprak-900">R$ 149</div>
                   <ul className="space-y-2">
-                    {["Acesso às aulas gravadas", "5 aulas ao vivo", "Atividades práticas", "Certificado"].map((t, i) => (
+                    {["Acesso vitalício", "5 mentorias ao vivo", "Exercícios práticos em projeto real no Jira", "Certificado"].map((t, i) => (
                       <li key={i} className="flex items-start gap-2 text-insprak-800"><CheckCircle2 className="h-5 w-5 mt-0.5 text-insprak-600" /> {t}</li>
                     ))}
                   </ul>
-                  <a href="https://pay.hotmart.com/D93730200N"><Button className="w-full rounded-2xl mt-2">Comprar agora</Button></a>
+                  <a href="https://pay.hotmart.com/D93730200N"><Button className="w-full rounded-2xl mt-2">Quero evoluir minha carreira</Button></a>
                 </CardContent>
               </Card>
 
@@ -380,9 +411,16 @@ export default function LandingCursoTesteBasico() {
           <motion.div {...fadeUp} className="bg-white rounded-2xl border border-insprak-200 shadow-sm p-6">
             <h3 className="text-xl font-semibold">Perguntas frequentes</h3>
             <div className="mt-4 space-y-4 text-sm">
+             <details className="group border border-insprak-200 rounded-xl p-4">
+                <summary className="font-medium cursor-pointer">Esse curso serve para quem já trabalha como QA?</summary>
+                <p className="mt-2 text-insprak-700">Sim. As atividades práticas exigem uma análise mais crítica do negócio. 
+                 Apesar de abordar fundamentos importantes, o maior diferencial do treinamento está nas práticas de revisão de especificações usando Inspeção PBR, 
+                 métricas de teste e construção de estratégias de qualidade, conteúdos normalmente pouco explorados em cursos introdutórios.
+                </p>
+              </details>
               <details className="group border border-insprak-200 rounded-xl p-4">
                 <summary className="font-medium cursor-pointer">Estou em transição de carreira</summary>
-                <p className="mt-2 text-insprak-700">O curso foi pensado para atender pessoas iniciantes do zero, pois teremos acompanhamento semanal.</p>
+                <p className="mt-2 text-insprak-700">O curso foi pensado para atender pessoas que querem evoluir como QA ou iniciantes do zero, pois teremos acompanhamento semanal em grupo.</p>
               </details>
               <details className="group border border-insprak-200 rounded-xl p-4">
                 <summary className="font-medium cursor-pointer">Qual o horário das mentorias ao vivo?</summary>
@@ -390,12 +428,14 @@ export default function LandingCursoTesteBasico() {
               </details>
               <details className="group border border-insprak-200 rounded-xl p-4">
                 <summary className="font-medium cursor-pointer">Preciso saber programar?</summary>
-                <p className="mt-2 text-insprak-700">Não. O curso é introdutório e foca em testes manuais e fundamentos.</p>
+                <p className="mt-2 text-insprak-700">Não. O curso além de introdutório com foco em testes manuais, também aborda técnicas e estratégias de teste com base em métricas.</p>
               </details>
               <details className="group border border-insprak-200 rounded-xl p-4">
                 <summary className="font-medium cursor-pointer">Este curso ensina automação de teste?</summary>
-                <p className="mt-2 text-insprak-700">Não. O curso foca em testes manuais para applicações WEB.</p>
+                <p className="mt-2 text-insprak-700">Não. O foco está em desenvolver capacidade analítica, revisão de especificações, métricas e estratégias de teste.
+                </p>
               </details>
+             
               <details className="group border border-insprak-200 rounded-xl p-4">
                 <summary className="font-medium cursor-pointer">Não consigo assistir ao vivo</summary>
                 <p className="mt-2 text-insprak-700">Caso não possa participar da mentoria ao vivo, você terá acesso à gravação da aula da sua turma.</p>
@@ -406,7 +446,7 @@ export default function LandingCursoTesteBasico() {
               </details>
               <details className="group border border-insprak-200 rounded-xl p-4">
                 <summary className="font-medium cursor-pointer">Por quanto tempo tenho acesso?</summary>
-                <p className="mt-2 text-insprak-700">12 meses a partir da compra.</p>
+                <p className="mt-2 text-insprak-700">Vitalício na plataforma do Hotmart.</p>
               </details>
             </div>
           </motion.div>
@@ -434,7 +474,7 @@ export default function LandingCursoTesteBasico() {
 
       <div className="mt-6 flex flex-wrap items-center gap-3">
       <a href={BOOK_LINK} target="_blank" rel="noreferrer">
-      <Button size="lg" className="rounded-2xl">Comprar livro</Button>
+      <Button size="lg" className="rounded-2xl">Adquirir o livro</Button>
       </a>
       <a href={BOOK_SAMPLE_LINK} target="_blank" rel="noreferrer">
       <Button variant="outline" size="lg" className="rounded-2xl">Ver amostra</Button>
@@ -452,7 +492,7 @@ export default function LandingCursoTesteBasico() {
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 text-sm">
           <div>
             <p className="font-bold text-lg text-insprak-900">Simplificando<b className="text-insprak-600"> Teste de Software</b></p>
-            <p className="text-insprak-700 mt-2">Formação introdutória em QA para quem quer dar os primeiros passos na área.</p>
+            <p className="text-insprak-700 mt-2">Formação para QA para quem quer evoluir na carreira.</p>
           </div>          
           <div>
             <p className="font-semibold text-insprak-900">Links</p>
