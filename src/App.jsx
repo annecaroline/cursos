@@ -3,13 +3,15 @@ import { motion } from "framer-motion";
 import { CheckCircle2, GraduationCap, Clock, Users, FileCheck2, Cpu, Rocket, PlayCircle, ShieldCheck, BookOpenText, MessageSquare, Star, ArrowRight, Layers, Bug, ClipboardCheck, ClipboardList, GitBranch, Laptop, Smartphone, Mail, Phone, MapPin } from "lucide-react";
 import bookCover from "./assets/frente_livro_simplificando_teste.png"; 
 import mentora from "./assets/annerocha_branco.png"; 
+import resultado from "./assets/valor_resultado.png";
 
 const BOOK_TITLE = "Livro Simplificando Teste de Software";
 const BOOK_SUBTITLE = "Conceitos essenciais e exemplos sobre Teste de Software";
 const BOOK_LINK = "https://www.amazon.com.br/dp/B0CBDXJB7B";         // ⟵ troque pelo link real (ex.: Amazon/Hotmart)
 const BOOK_SAMPLE_LINK = "https://www.amazon.com.br/Simplificando-Teste-Software-Caroline-Rocha/dp/6500722159/ref=cm_cr_arp_d_product_top?ie=UTF8&asin=B0CBDXJB7B&revisionId=eb94ca7b&format=3&depth=1";  // ⟵ troque pelo PDF/landing da amostra
 const BOOK_COVER_URL = bookCover;           // ⟵ troque pela imagem da capa
-const MENTORA = mentora; 
+const MENTORA = mentora;
+const RESULTADO = resultado;
  
 // === Depoimentos (edite os nomes/roles/quotes aqui) ===
 const TESTIMONIALS = [
@@ -130,7 +132,7 @@ export default function LandingCursoTesteBasico() {
       </header>
      
       
-
+     
       {/* Hero */}
       <section id="home" className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(108,99,255,0.06),transparent)]" />
@@ -158,7 +160,9 @@ export default function LandingCursoTesteBasico() {
           </motion.div>
           <motion.div {...fadeUp} className="relative">
 <div className="aspect-video rounded-2xl border border-insprak-200 shadow-lg overflow-hidden bg-white">
-{YT_ID ? (
+ 
+<div className="h-full w-full grid place-items-center">
+ {YT_ID ? (
     <iframe
       className="h-full w-full"
       src={`https://www.youtube.com/embed/${YT_ID}?rel=0`}
@@ -173,8 +177,11 @@ export default function LandingCursoTesteBasico() {
 <PlayCircle className="h-16 w-16 text-insprak-600" />
 </div>
 )}
+
 </div>
-<p className="text-6 text-center text-insprak-700 mt-2">Curso para evolução na carreira como QA</p>
+ 
+</div>
+<p className="text-6 text-center text-insprak-700 mt-2">Profissional que agrega valor ao time!</p>
 </motion.div>
         </div>
       </section>
@@ -382,17 +389,11 @@ export default function LandingCursoTesteBasico() {
       <section id="matricula" className="py-16">
         <div className="max-w-6xl mx-auto px-4 grid lg:grid-cols-3 gap-6 items-start">
           <motion.div {...fadeUp} className="lg:col-span-2">
-            <h2 className="text-2xl md:text-3xl font-bold">Pense como um QA Estratégico</h2> 
-            <p className="text-insprak-700 mt-2"><b>Antes do curso</b></p>
-            <p className="text-insprak-700 mt-2">"Vou esperar a funcionalidade ficar pronta para testar."</p> 
-            <p className="text-insprak-700 mt-2">"A quantidade de bugs só aumenta e o time nem está corrigindo."</p>
-            <p className="text-insprak-700 mt-2"><b>Depois do curso</b></p>            
-            <p className="text-insprak-700 mt-2">"Já encontrei três inconsistências na especificação antes do desenvolvimento começar."</p>
-            <p className="text-insprak-700 mt-2">"Quase não temos incidentes em produção, a equipe agora tem o foco em qualidade."</p>
+            
             <div className="grid md:grid-cols-1 gap-6 mt-6">
               <Card className="rounded-2xl">
                 <CardHeader>
-                  <CardTitle className="text-xl">Torne-se o profissional que agrega mais valor para o time antes mesmo da implementação começar.</CardTitle>
+                  <CardTitle className="text-xl">Torne-se o profissional que agrega mais valor para o time</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm">
                   <div className="text-3xl font-black text-insprak-900">R$ 149</div>
@@ -403,10 +404,19 @@ export default function LandingCursoTesteBasico() {
                   </ul>
                   <a href="https://pay.hotmart.com/D93730200N"><Button className="w-full rounded-2xl mt-2">Quero evoluir minha carreira</Button></a>
                 </CardContent>
-              </Card>
-
-               
+              </Card>               
             </div>
+           <div className="grid md:grid-cols-1 gap-6 mt-6">
+            <Card className="rounded-2xl">
+                <CardHeader>
+                  <CardTitle className="text-xl">Pense como um QA Estratégico</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-sm">
+                  <img src={RESULTADO} alt="Resultado do trabalho realizado" className="h-full w-full object-cover" />
+                  <a href="https://pay.hotmart.com/D93730200N"><Button className="w-full rounded-2xl mt-2">Quero evoluir minha carreira</Button></a>
+                </CardContent>
+              </Card>       
+           </div>
           </motion.div>
 
           {/* FAQ */}
